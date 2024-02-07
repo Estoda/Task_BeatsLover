@@ -85,12 +85,6 @@ header .links .icon span {
     border-radius: 5px;
 }
 
-header .links .icon span:first-child {}
-
-header .links .icon span:nth-child(2) {}
-
-header .links .icon span:last-child {}
-
 header:hover .links .icon span:first-of-type {
     position: absolute;
     transform: rotate(45deg);
@@ -145,14 +139,18 @@ header li {
     }
 
     header ul {
-        text-align: center;
+        width: 100%;
         flex-direction: column;
+        padding: 0;
+        justify-content: center;
     }
 
     header li {
         width: 100%;
         text-align: center;
     }
+
+
 }
 
 header:hover .mega-menu,
