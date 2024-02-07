@@ -1,0 +1,764 @@
+/* Start Genderal  */
+body {
+    background-color: black;
+    font-family: 'Outfit', sans-serif;
+    color: white;
+}
+
+*::selection {
+    background-color: rgba(130, 163, 62, 0.812);
+    color: white;
+}
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style: none;
+
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* End Genderal  */
+/* Start Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    line-height: 9px;
+    font-size: 10px;
+    padding: 20px 30px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header .logo:hover {
+    transition: 0.3s;
+    color: black;
+    background-color: white;
+    font-size: 14px;
+    line-height: 12px;
+    padding: 17px 30px;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+header .links {
+    position: relative;
+    width: 90%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+header .links span.icon {
+    margin-top: 20px;
+    width: 30px;
+    height: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+header .links .icon span {
+    background-color: white;
+    margin-bottom: 5px;
+    width: 30px;
+    height: 3px;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+header .links .icon span:first-child {}
+
+header .links .icon span:nth-child(2) {}
+
+header .links .icon span:last-child {}
+
+header:hover .links .icon span:first-of-type {
+    position: absolute;
+    transform: rotate(45deg);
+    /* z-index: -1; */
+    background-color: red;
+    width: 30px;
+}
+
+header:hover .links .icon span:nth-child(2) {
+    display: none;
+}
+
+header:hover .links .icon span:last-child {
+    position: absolute;
+    transform: rotate(-45deg);
+    background-color: red;
+    transition: 0.3s;
+    width: 30px;
+
+}
+
+header .links .mega-menu {
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    padding: 5px;
+    background-color: rgb(32, 32, 32);
+    border-bottom: 3px solid white;
+    z-index: -1;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    transition: top 0.3s, opacity 0.3s;
+    opacity: 0;
+}
+
+header ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+header li {
+    width: 48%;
+    padding: 10px
+}
+
+@media (max-width:767px) {
+    header .mega-menu {
+        width: 100%;
+        left: 0;
+    }
+
+    header ul {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    header li {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+header:hover .mega-menu,
+header .mega-menu:hover,
+header .links:hover .mega-menu {
+    opacity: 1;
+    z-index: 100;
+    top: calc(100% + 10px);
+    transition: 0.3s;
+}
+
+header ul li a {
+    width: 50%;
+    padding: 5px 20px;
+    color: white;
+}
+
+header ul li a:hover {
+    color: black;
+    background-color: white;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+@media (max-width:767px) {
+    header ul li a {
+        font-size: 10px;
+    }
+}
+
+header ul li a.active {
+    border: 2px solid white;
+    border-radius: 50px;
+}
+
+/* End Header */
+/* Start welcome */
+.welcome {
+    margin: 10px auto;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width:767px) {
+    .welcome {
+        flex-direction: column;
+    }
+}
+
+.welcome h1 {
+    width: 48%;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+
+.welcome .text {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width:767px) {
+    .welcome h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .welcome .text {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.welcome .text p {
+    margin-bottom: 50px;
+}
+
+.welcome .text .links {
+    margin-top: 20px;
+}
+
+.welcome .text .links a {
+    padding: 5px 20px;
+    /* display: flex; */
+}
+
+.welcome .text .links a i {
+    font-size: 10px;
+    padding-left: 3px;
+}
+
+.welcome .text .links a:hover {
+    background-color: white;
+    color: black;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.welcome .text .links a.active {
+    background-color: white;
+    color: black;
+    border-radius: 50px;
+}
+
+@media (max-width:805px) {
+    .welcome .text .links a {
+        font-size: 10px;
+    }
+}
+
+
+
+/* End welcome */
+/* Start DJ  */
+img {
+    width: 100%;
+}
+
+hr {
+    margin: 50px 20px;
+}
+
+/* End DJ  */
+/* Start Beats */
+.beats {
+    padding: 20px 30px;
+}
+
+.beats .text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.ld {
+    margin-top: 20px;
+    padding: 10px;
+    position: relative;
+    height: 40px;
+}
+
+a.view {
+    padding: 10px 15px;
+    font-weight: bold;
+    z-index: 0;
+}
+
+a.view::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: white;
+    z-index: -1;
+    transition: 0.3s;
+    border-radius: 7px;
+}
+
+a.view:hover::before {
+    width: 100%;
+}
+
+a.view:hover {
+    color: black;
+    transition: 0.3s;
+}
+
+a.view i {
+    font-size: 12px;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+@keyframes moving-arrow {
+    100% {
+        transform: translateX(10px);
+    }
+}
+
+a.view:hover i {
+    animation: moving-arrow 0.4s linear infinite;
+}
+
+
+.beats .mus {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.beats .mus>div:hover {
+    transform: translateY(-10px);
+}
+
+.beats .mus div {
+    background-color: rgb(32, 32, 32);
+    width: 100%;
+    padding: 10px;
+    border-radius: 7px;
+    margin: 7px 0;
+    transition: 0.3s;
+
+}
+
+@media (min-width:767px) {
+    .beats .mus div {
+        width: 48%;
+    }
+}
+
+@media (min-width:1200px) {
+    .beats .mus div {
+        width: 23%;
+    }
+}
+
+.beats .mus div img {
+    border-radius: 7px;
+}
+
+.beats .mus div .hh {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 0;
+    margin: 0 0;
+}
+
+.beats .mus div .hh h5 {
+    font-weight: bold;
+}
+
+.beats .mus div .hh .lll {
+    text-align: end;
+}
+
+.beats .mus div .hh .lll span {
+    font-size: 10px;
+}
+
+.beats .mus div .hh .lll span.nnn {
+    color: #777;
+    padding-left: 2px;
+}
+
+.beats .mus div p {
+    color: #777;
+}
+
+.beats .mus div div:not(.lll) {
+    padding: 0 0;
+    margin: 0 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.beats .mus div div span {
+    padding: 2px 0px;
+}
+
+.beats .mus div div a {
+    padding: 5px 20px;
+    border: 2px solid white;
+    border-radius: 50px;
+}
+
+.beats .mus div div a:hover {
+    color: black;
+    background-color: white;
+    transition: 0.3s;
+}
+
+/* End Beats */
+/* Start Members */
+.mem {
+    padding: 20px 30px;
+}
+
+.mem .hhh {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mem .box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.mem .box .user {
+    display: flex;
+    background-color: rgb(32, 32, 32);
+    width: 100%;
+    padding: 20px;
+    border-radius: 50px;
+    margin: 7px 0;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+.mem .box .user:hover::before {
+    animation: flashing 0.5s;
+}
+
+@keyframes flashing {
+
+    0%,
+    40% {
+        opacity: 1;
+    }
+
+    100% {
+        width: 200%;
+        height: 400%;
+        opacity: 0;
+    }
+}
+
+.mem .box .user::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    z-index: 2;
+    border-radius: 100%;
+}
+
+@media (min-width:767px) {
+    .mem .box .user {
+        width: 48%;
+    }
+}
+
+@media (min-width:1200px) {
+    .mem .box .user {
+        width: 23%;
+    }
+}
+
+.mem .box .user img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+.mem .box .user .text .name {
+    font-weight: bold;
+}
+
+.mem .box .user .text .job {
+    font-size: 12px;
+    color: #777;
+    margin: 10px;
+}
+
+/* End Members */
+/* Start Benefits */
+.benefits {
+    padding: 20px 30px;
+}
+
+.benefits .all {
+    display: flex;
+    justify-content: space-between;
+}
+
+.benefits img {
+    width: 100%;
+    border-radius: 7px;
+}
+
+.benefits .text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.benefits .text .para {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    border-width: 3px 1px 1px 1px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 7px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+@media (min-width:767px) {
+    .benefits .text .para {
+        width: 48%;
+    }
+}
+
+@media (min-width:1200px) {
+    .benefits .text .para {
+        width: 30%;
+    }
+}
+
+.benefits .text .para h3 {
+    font-weight: bold;
+}
+
+.benefits .text .para p {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.benefits .com {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.benefits .com img {
+    width: 48%;
+    filter: grayscale(100%)
+}
+
+@media(min-width:1200px) {
+    .benefits .com img {
+        width: 16%
+    }
+}
+
+.benefits .own {
+    background-image: url("../image/textback.png");
+    margin-top: 60px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 7px;
+}
+
+.benefits .own h1 {
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.benefits .own p {
+    max-width: 400px;
+    margin: 0;
+    font-size: 12px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* End Benefits */
+/* Start Provide */
+.provide {
+    padding: 20px 30px;
+}
+
+.provide .text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.provide .text div {
+    width: 100%;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+@media(min-width:767px) {
+    .provide .text div {
+        width: 48%;
+    }
+}
+
+.provide .text .ex {
+    background-image: url("../image/exback.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px 20px 170px 20px;
+    border-radius: 7px;
+}
+
+.provide .text .edm {
+    background-image: url("../image/edm.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px 20px 170px 20px;
+    border-radius: 7px;
+}
+
+/* End Provide */
+/* Start Contact */
+.contact {
+    padding: 0 30px 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact>div {
+    width: 100%;
+    text-align: center;
+}
+
+@media(min-width:767px) {
+    .contact>div {
+        width: 30%;
+        text-align: start;
+    }
+}
+
+.contact .hhh h1 {
+    font-size: 55px;
+}
+
+.contact p,
+a {
+    font-size: 12px;
+    color: #777;
+}
+
+.contact h6 {
+    font-size: 14px;
+    margin: 0;
+}
+
+.contact .send {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact .send div {
+    margin-bottom: 20px;
+}
+
+.contact .links {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+}
+
+@media (max-width:767px) {
+    .contact .links {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .contact .links h6 {
+        width: 100%;
+    }
+
+    .contact .links>div {
+        width: 30%;
+    }
+}
+
+.contact .links>div::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: white;
+    z-index: -1;
+    transition: 0.3s;
+    border-radius: 7px;
+}
+
+
+.contact .links>div:hover::before {
+    width: 100%;
+}
+
+.contact .links>div:hover a {
+    color: black;
+}
+
+.contact .links>div {
+    padding: 10px;
+    position: relative;
+}
+
+.contact .links a div {
+    margin-left: 4px;
+    display: inline-block;
+}
+
+/* End Contact */
+/* End Contact */
