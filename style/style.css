@@ -73,7 +73,7 @@ header .links span.icon {
     height: 24px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 header .links .icon span {
@@ -81,9 +81,15 @@ header .links .icon span {
     margin-bottom: 5px;
     width: 30px;
     height: 3px;
-    transition: 0.3s;
+    transition: 0.5s;
     border-radius: 5px;
 }
+
+header .links .icon span:first-child {}
+
+header .links .icon span:nth-child(2) {}
+
+header .links .icon span:last-child {}
 
 header:hover .links .icon span:first-of-type {
     position: absolute;
@@ -94,7 +100,7 @@ header:hover .links .icon span:first-of-type {
 }
 
 header:hover .links .icon span:nth-child(2) {
-    display: none;
+    width: 0;
 }
 
 header:hover .links .icon span:last-child {
@@ -108,10 +114,10 @@ header:hover .links .icon span:last-child {
 
 header .links .mega-menu {
     position: absolute;
-    width: 50%;
+    width: 900%;
     left: 50%;
     padding: 5px;
-    background-color: rgb(32, 32, 32);
+    background-color: rgb(14, 14, 14);
     border-bottom: 3px solid white;
     z-index: -1;
     display: flex;
@@ -124,12 +130,12 @@ header .links .mega-menu {
 header ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: start;
 }
 
 header li {
-    width: 48%;
-    padding: 10px
+    width: fit-content;
+    padding: 10px;
 }
 
 @media (max-width:767px) {
@@ -139,18 +145,14 @@ header li {
     }
 
     header ul {
-        width: 100%;
+        text-align: center;
         flex-direction: column;
-        padding: 0;
-        justify-content: center;
     }
 
     header li {
         width: 100%;
         text-align: center;
     }
-
-
 }
 
 header:hover .mega-menu,
@@ -162,7 +164,15 @@ header .links:hover .mega-menu {
     transition: 0.3s;
 }
 
-header ul li a {
+header .mega-menu ul {
+    padding: 0;
+}
+
+header .mega-menu ul li {
+    padding: 10px 0;
+}
+
+header .mega-menu ul li a {
     width: 50%;
     padding: 5px 20px;
     color: white;
